@@ -41,7 +41,7 @@ function transform(source: ModuleOptions): ModuleOptions {
 
   const location: Location = new NameParser().parse(target);
   target.name = normalizeToKebabOrSnakeCase(location.name);
-  target.path = normalizeToKebabOrSnakeCase(`modules/${location.path}`);
+  target.path = normalizeToKebabOrSnakeCase(`${location.path}`);
   target.language = target.language !== undefined ? target.language : 'ts';
 
   target.path = target.flat
